@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        input[type="submit"] {
+            font-size: 18px;
+            color: #fff;
+            background-color: #5a5a5a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result:</h1>
+        <h2>Predicted Celebrity: {{ pred }}</h2>
+        <div>
+            <img src="{{ url_for('static', filename='16.jpg') }}" alt="Uploaded Image" style="max-width: 100%; border-radius: 8px;">
+
+        </div>
+    </div>
+</body>
+</html>
